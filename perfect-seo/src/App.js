@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import Header from './component/Header'
-import ControlledCarousel from './component/ControlledCarousel'
+import Carousel from './component/Carousel'
 import './App.css';
 
 class App extends React.Component {
@@ -9,7 +9,7 @@ class App extends React.Component {
     return (
       <div className="App">
           <Header />
-          <ControlledCarousel />
+          <Carousel />
       </div>
     );
   }
