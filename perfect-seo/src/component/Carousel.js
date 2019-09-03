@@ -10,37 +10,47 @@ const images = [
 ];
 
 function Carousel() {
+
+    //Replace with state component for consistency
     const [index, setIndex] = React.useState(0);
 
-    // React.useEffect(() => {
-    //     const timer = setInterval(() => {
-    //         if (index === 4) {
-    //             setIndex(0);
-    //         } else {
-    //             setIndex(prev => prev + 1);
-    //         }
-    //     }, 3000);
-    //     return () => clearInterval(timer);
-    // }, [index]);
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            if (index === 4) {
+                setIndex(0);
+            } else {
+                setIndex(prev => prev + 1);
+            }
+        }, 3000);
+        return () => clearInterval(timer);
+    }, [index]);
 
     return (
-        <Gallery
+        <div className='outer-carousel'
             style={{
-                background: "white",
                 height: "50vh",
-                width: "50vw",
-                textAlign: "center",
-                margin: "auto"
-            }}
-            index={index}
-            onRequestChange={i => {
-                setIndex(i);
-            }}
-        >
-            {images.map(image => (
-                <GalleryImage objectFit="contain" key={image} src={image} />
-            ))}
-        </Gallery>
+                width: "100vw",
+                backgroundColor: 'bisque',
+            }}>
+            <div className='inner-carousel'
+                style={{
+                    height: "50vh",
+                    width: "50vw",
+                    textAlign: "center",
+                    margin: "auto"
+                }}>
+                <Gallery
+                    index={index}
+                    onRequestChange={i => {
+                        setIndex(i);
+                    }}
+                >
+                    {images.map(image => (
+                        <GalleryImage objectFit="contain" key={image} src={image} />
+                    ))}
+                </Gallery>
+            </div>
+        </div>
     );
 }
 
