@@ -1,3 +1,8 @@
 import React from 'react'
+import { AuthButton } from './AuthButton'
 
-export const Protected = () => <h3>YOU ARE IN PROTECTED FILES</h3>
+export const Protected = () =>
+<div>
+<h3>YOU ARE IN PROTECTED FILES</h3>
+<AuthButton />
+</div>
