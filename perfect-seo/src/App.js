@@ -1,6 +1,5 @@
 import React from 'react';
 import Home from './Pages/Home'
-import { AuthButton } from './component/AuthButton'
 import { PrivateRoute } from './component/PrivateRoute'
 import { Public } from './component/Public'
 import { Protected } from './component/Protected'
@@ -21,17 +20,10 @@ class App extends React.Component {
         <Router>
           <NavBar />
           <Switch>
-          <Route exact path="/" component={Home} />
-          {/* <div> */}
-            {/* <AuthButton />
-            <ul>
-              <li><Link to='/public'>Public Page</Link></li>
-              <li><Link to='/protected'>Protected Page</Link></li>
-            </ul> */}
+            <Route exact path="/" component={Home} />
             <Route path='/public' component={Public} />
             <Route path='/login' component={Login} />
             <PrivateRoute path='/protected' component={Protected} />
-          {/* </div> */}
           </Switch>
         </Router>
       </div>

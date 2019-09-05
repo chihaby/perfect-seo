@@ -30,7 +30,7 @@ function Carousel() {
             style={{
                 height: "50vh",
                 width: "100vw",
-                backgroundColor: 'bisque',
+                // backgroundColor: '#73b2d8',
             }}>
             <div className='inner-carousel'
                 style={{
