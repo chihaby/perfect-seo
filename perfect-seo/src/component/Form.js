@@ -7,18 +7,18 @@ const Title = styled.h3`
     color: palevioletred;
 `;
 
-// const Button = styled.button`
-//     font-family: sans-serif;
-//     font-size: 1.3rem;
-//     border: none;
-//     border-radius: 5px;
-//     background-color: ${props => props.primary ? 'red' : 'green'};
-//     color: white;
-//     padding: 7px 10px;
-//     :hover{
-//         background-color: blue;
-//     }
-// `
+export const Button = styled.button`
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 5px;
+    background-color: ${props => props.primary ? 'red' : 'green'};
+    color: white;
+    padding: 7px 10px;
+    :hover{
+        background-color: blue;
+    }
+`
 
 class Form extends React.Component {
 
@@ -42,7 +42,7 @@ class Form extends React.Component {
 
     render() {
         return (
-            <form>
+            <form >
                 <Title>Login</Title>
                 <input type="text" name="email" placeholder="Email" value={this.state.email} onChange={this.handleEmailChange} />
                 <input type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.handlePasswordChange} />
@@ -53,4 +53,4 @@ class Form extends React.Component {
     }
 }
 
-export default Form;
+export default Form; 

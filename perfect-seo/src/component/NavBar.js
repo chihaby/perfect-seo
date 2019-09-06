@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 
 class NavBar extends React.Component {
     render() {
@@ -11,10 +11,6 @@ class NavBar extends React.Component {
                     <Nav.Link href="/public">Public</Nav.Link>
                     <Nav.Link href="/protected">Protected</Nav.Link>
                 </Nav>
-                <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <Button variant="outline-info">Search</Button>
-                </Form>
             </Navbar>
         )
     }

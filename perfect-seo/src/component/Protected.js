@@ -3,6 +3,6 @@ import { AuthButton } from './AuthButton'
 
 export const Protected = () =>
     <div>
-        <h3>YOU ARE IN PROTECTED FILES</h3>
+        <h3>YOU ARE NOW IN PROTECTED FILES</h3>
         <AuthButton />
     </div>
